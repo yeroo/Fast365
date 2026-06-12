@@ -1,0 +1,11 @@
+build/
+build-cmake/
+*.obj
+*.exe
+*.pdb
+*.ilk
+tests/sample.docx
+tests/*.html
+tests/corpus/
+tests/corpus_report.txt
+.vs/
