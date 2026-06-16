@@ -11,6 +11,7 @@ add_executable(fast365
     src/zip.cpp
     src/inflate.cpp
     src/html_util.cpp
+    $<$<BOOL:${WIN32}>:src/fast365.rc>
 )
 
 if(MSVC)
