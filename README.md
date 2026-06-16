@@ -1,5 +1,10 @@
 # Fast365
 
+[![CI](https://github.com/yeroo/Fast365/actions/workflows/ci.yml/badge.svg)](https://github.com/yeroo/Fast365/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/yeroo/Fast365)](https://github.com/yeroo/Fast365/releases/latest)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/yeroo/Fast365/badge)](https://scorecard.dev/viewer/?uri=github.com/yeroo/Fast365)
+
 A very fast, zero-dependency command-line converter from Microsoft Word
 `.docx` to HTML, written in C++17 for Windows.
 

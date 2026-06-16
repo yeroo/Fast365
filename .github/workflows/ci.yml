@@ -1,0 +1,26 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Use the runner's default Visual Studio generator (windows-latest moved to
+      # VS2026); -A x64 still applies since the default generator is a VS generator.
+      - name: Configure
+        run: cmake -S . -B build -A x64
+
+      - name: Build
+        run: cmake --build build --config Release
+
+      - name: Smoke
+        shell: pwsh
+        run: |
+          $exe = "build/Release/fast365.exe"
+          if (-not (Test-Path $exe)) { Write-Error "::error::fast365.exe was not produced"; exit 1 }
+          Get-Item $exe | Format-List Name,Length
